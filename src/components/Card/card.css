@@ -1,0 +1,115 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ajuste para ocupar toda a largura em telas menores */
+    max-width: 280px; /* Limita a largura máxima */
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 16px;
+    padding: 20px;
+    background-color: #eeab54a2; /* Fundo bege */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto; /* Centraliza os cards em telas menores */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  }
+  
+  .card img {
+    border-radius: 12px;
+    width: 100%; /* Mantém a imagem responsiva */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    max-height: 200px; /* Limita a altura máxima em telas maiores */
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem; /* Reduz o tamanho do título em telas menores */
+    color: #80543B;
+    margin: 8px 0;
+    text-align: center; /* Centraliza o texto em telas menores */
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .card p {
+    font-size: 0.95rem; /* Reduz levemente o texto para legibilidade */
+    color: #80543B;
+    margin: 8px 0;
+    text-align: center; /* Centraliza o texto */
+    width: 100%;
+    line-height: 1.6;
+  }
+  
+  .card .price {
+    font-size: 1.1rem; /* Ajuste para telas menores */
+    font-weight: bold;
+    color: #c5610f;
+    margin-bottom: 12px;
+    align-self: center; /* Centraliza o preço */
+  }
+  
+  .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as tags */
+    gap: 8px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .card .tag {
+    font-size: 0.8rem; /* Reduz levemente o tamanho das tags */
+    background-color: #80543B;
+    color: #f5e6d3;
+    padding: 6px 12px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .card .tag:hover {
+    background-color: #c5610f;
+    transform: scale(1.1);
+  }
+  
+  /* Media query para telas menores */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%; /* Ocupa toda a largura disponível */
+      padding: 16px; /* Reduz o padding para economizar espaço */
+    }
+  
+    .card img {
+      max-height: 150px; /* Ajusta a altura máxima da imagem */
+    }
+  
+    .card h2 {
+      font-size: 1rem; /* Reduz ainda mais o título */
+    }
+  
+    .card p {
+      font-size: 0.9rem; /* Ajusta o tamanho do texto */
+    }
+  
+    .card .price {
+      font-size: 1rem; /* Tamanho menor para o preço */
+    }
+  
+    .card .tags {
+      gap: 4px; /* Reduz o espaço entre as tags */
+    }
+  
+    .card .tag {
+      font-size: 0.75rem; /* Ajusta o tamanho das tags */
+      padding: 4px 8px; /* Reduz o padding das tags */
+    }
+  }
+  

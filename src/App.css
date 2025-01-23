@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    background-color: #f5e6d3;
+}
+
+.titulo {
+    margin-top: 100px;
+    color: #80543B;
+    margin-bottom: 28px;
+    font-size: 48px; /* Ajuste para telas menores */
+    text-align: center;
+}
+
+.subtitulo {
+    color: #80543B;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+   
+}
+
+.imginit {
+    margin-bottom: 28px;
+    margin-top: 28px;
+    width: 80%; /* Ajusta o tamanho da imagem no mobile */
+    max-width: 300px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Reduz para 2 colunas no mobile */
+    gap: 16px;
+    width: 100%; /* Garante que o grid ocupe toda a largura */
+    padding: 16px;
+}
+
+.container button {
+    background-color: #c5610f;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    bottom: 16px;
+    right: 24px;
+    transition: all 0.1s linear 0.1s;
+    cursor: pointer;
+}
+
+.container button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 7px 0px;
+    transform: scale(1.1);
+}
+
+/* Estilo para Mobile */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 20px; /* Reduz tamanho da fonte no mobile */
+        margin-top: 50px; /* Ajusta o espaçamento */
+    }
+
+    .subtitulo {
+        font-size: 18px; /* Reduz tamanho da fonte no mobile */
+        margin-bottom: 16px; /* Ajusta o espaçamento */
+    }
+
+    .imginit {
+        width: 90%; /* Ajusta a largura da imagem no mobile */
+        max-width: 250px; /* Limita o tamanho máximo */
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* Exibe os cards em 1 coluna no mobile */
+        gap: 12px;
+        padding: 8px; /* Reduz o espaçamento no mobile */
+    }
+
+    .container button {
+        width: 100%; /* Botão ocupa toda a largura */
+        max-width: 300px; /* Limita o tamanho do botão */
+        height: 45px; /* Ajusta altura do botão */
+    }
+}

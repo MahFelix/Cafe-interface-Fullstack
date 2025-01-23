@@ -1,0 +1,166 @@
+/* Reset Geral */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Container */
+.hero-container {
+    background-image: url('/src/assets/Cafe_Template.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative; /* Para manter o menu hamburguer no layout */
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.navbar-links li {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Menu Hamburguer */
+.navbar-hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    list-style: none;
+    gap: 10px;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.text-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #F5E5CA;
+    font-family: "Dancing Script", serif;
+}
+
+.text-content .subtitle {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #F5E5CA;
+    opacity: 0.9;
+}
+
+.text-content .description {
+    font-size: 26px;
+    max-width: 600px;
+    color: #F5E5CA;
+    opacity: 0.8;
+}
+
+/* Classe .Molde */
+.Molde {
+    display: flex;
+    position: absolute;
+    width: 1000px;
+}
+
+@media (max-width: 768px) {
+    /* Ajusta Navbar */
+    .hero-container {
+        position: relative;
+        background-image: url('/src/assets/cafee.png');
+        background-size: cover;
+        background-position: center;
+       
+    }
+    
+    .hero-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit; /* Herda o fundo */
+        opacity: 0.7; /* Ajuste conforme necessário */
+        z-index: -1; /* Coloca a camada atrás do conteúdo */
+    }
+    
+    .navbar-links {
+        display: none; /* Esconde links no mobile */
+    }
+
+    .navbar-hamburger {
+        display: block; /* Exibe menu hamburguer no mobile */
+    }
+
+    .Molde {
+        display: none; /* Bloqueia a imagem da classe .Molde no mobile */
+    }
+
+    /* Ajusta Hero Container */
+    .text-content h1 {
+        font-size: 36px;
+    }
+
+    .text-content .subtitle {
+        font-size: 24px;
+    }
+
+    .text-content .description {
+        font-size: 20px;
+    }
+}

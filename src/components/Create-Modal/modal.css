@@ -1,0 +1,172 @@
+/* Modal Overlay */
+.modal-overflow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Um pouco mais opaco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px); /* Efeito de desfoque */
+}
+
+/* Modal Body */
+.modal-body {
+    background-color: #fff;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    width: 420px;
+    padding: 24px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-body h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.75rem; /* Um pouco maior */
+    margin-bottom: 24px;
+    font-weight: 600; /* Negrito mais leve */
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaçamento consistente */
+}
+
+.input-container label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.input-container input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9; /* Fundo suave */
+}
+
+.input-container input:focus {
+    border-color: #F29F05;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 159, 5, 0.4); /* Glow suave */
+}
+
+/* Error Styling */
+.input-error {
+    border-color: red !important;
+    background-color: #ffe6e6; /* Fundo leve para erro */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+/* Button Styling */
+.btn-secondary {
+    background-color: #F29F05;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: #e68900;
+    box-shadow: 0 4px 8px rgba(230, 137, 0, 0.2);
+}
+
+.btn-secondary:active {
+    background-color: #c67d00;
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+.btn-secondary:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .modal-body {
+        width: 90%; /* Ajusta o tamanho para telas menores */
+        padding: 16px;
+    }
+
+    .modal-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-container input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Botão Fechar */
+.btn-close {
+    background-color: #ccc;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1; /* Ajusta a largura proporcional ao botão Postar */
+    text-align: center;
+}
+
+.btn-close:hover {
+    background-color: #bbb;
+}
+
+.btn-close:active {
+    background-color: #aaa;
+}

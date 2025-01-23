@@ -1,0 +1,61 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5e6d3; /* Tom bege semelhante ao fundo da imagem */
+    padding: 2rem;
+    width: 100%;
+    flex-direction: column; /* Para alinhar tudo verticalmente no mobile */
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center; /* Alinha o conteúdo no centro */
+    margin-left: 0; /* Remove margem para dispositivos móveis */
+    flex-direction: column; /* Para alinhar verticalmente no mobile */
+}
+
+.about-image {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    color: #815a3a; /* Cor marrom semelhante ao texto */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    width: 700px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #5e3b2e; /* Cor marrom escuro para o título */
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Coloca a imagem e o texto em uma coluna */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+  
+    .about-image {
+        width: 80%; /* Ajusta o tamanho da imagem */
+        max-width: none; /* Remove o limite máximo de largura */
+    }
+
+    .about-text {
+        width: 90%; /* Ajusta a largura do texto */
+        text-align: center; /* Centraliza o texto */
+    }
+}
