@@ -1,1 +1,0 @@
-const prompts = "TUDO BEM MUNDO";124
