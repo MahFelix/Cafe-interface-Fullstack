@@ -5,7 +5,7 @@
     background-color: #f5e6d3; /* Tom bege semelhante ao fundo da imagem */
     padding: 2rem;
     width: 100%;
-    flex-direction: column; /* Para alinhar tudo verticalmente no mobile */
+    flex-direction: column; /* Alinhamento vertical no mobile */
 }
 
 .about-content {
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center; /* Alinha o conteúdo no centro */
     margin-left: 0; /* Remove margem para dispositivos móveis */
-    flex-direction: column; /* Para alinhar verticalmente no mobile */
+    flex-direction: column; /* Alinhamento vertical no mobile */
 }
 
 .about-image {
@@ -57,5 +57,17 @@
     .about-text {
         width: 90%; /* Ajusta a largura do texto */
         text-align: center; /* Centraliza o texto */
+    }
+}
+
+/* Ajustes para desktop */
+@media (min-width: 769px) {
+    .about-content {
+        flex-direction: row; /* Coloca a imagem e o texto lado a lado */
+        align-items: flex-start; /* Alinha verticalmente ao topo */
+    }
+
+    .about-text {
+        text-align: left; /* Alinha o texto à esquerda */
     }
 }
